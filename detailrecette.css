@@ -1,0 +1,182 @@
+/* detailrecette.css */
+
+/* Conteneur principal de la carte de recette */
+.recipe-card {
+    max-width: 1000px; /* Largeur maximale de la carte */
+    margin: 50px auto; /* Centrage horizontal avec une marge en haut et en bas */
+    padding: 30px; /* Espacement intérieur */
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a); /* Dégradé de fond */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    color: white; /* Couleur du texte */
+}
+
+/* Titre de la recette */
+.recipe-card .card-header h1 {
+    font-family: 'Rock Salt', cursive; /* Police personnalisée */
+    font-size: 2.5em; /* Taille de la police */
+    color: #ffcc00; /* Couleur du texte */
+    text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.7); /* Ombre du texte */
+}
+
+/* Image de la recette */
+.recipe-image {
+    width: 100%; /* Largeur de l'image */
+    height: 450px; /* Hauteur fixe de l'image */
+    object-fit: cover; /* Ajuste l'image pour couvrir l'espace */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Section des ingrédients */
+.recipe-ingredients {
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    margin-top: 20px; /* Marge en haut */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure semi-transparente */
+}
+
+.recipe-ingredients h2 {
+    font-family: 'Rock Salt', cursive; /* Police personnalisée */
+    color: #ffcc00; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    margin-bottom: 15px; /* Marge en bas */
+}
+
+/* Liste des ingrédients */
+.recipe-ingredients-list .list-group-item {
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Bordure en bas */
+    color: white; /* Couleur du texte */
+    font-size: 1.1em; /* Taille de la police */
+    padding: 10px; /* Espacement intérieur */
+}
+
+.recipe-ingredients-list .list-group-item:last-child {
+    border-bottom: none; /* Supprime la bordure du dernier élément */
+}
+
+/* Sections Description et Instructions */
+.recipe-description, .recipe-instructions {
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    margin-top: 20px; /* Marge en haut */
+}
+
+.recipe-description h2, .recipe-instructions h2 {
+    font-family: 'Rock Salt', cursive; /* Police personnalisée */
+    color: #ffcc00; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    margin-bottom: 15px; /* Marge en bas */
+    font-size: 2em; /* Taille de la police */
+}
+
+.recipe-description p {
+    font-size: 1.2em; /* Taille de la police */
+    line-height: 1.8; /* Hauteur de ligne */
+    text-align: center; /* Centrage du texte */
+}
+
+.recipe-instructions p {
+    font-size: 1.2em; /* Taille de la police */
+    line-height: 1.8; /* Hauteur de ligne */
+    text-align: justify; /* Justification du texte */
+}
+
+/* Section des commentaires */
+.comment-container {
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    padding: 25px; /* Espacement intérieur */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    margin-top: 30px; /* Marge en haut */
+}
+
+/* Boîte de commentaire */
+.comment-box {
+    background: rgba(51, 51, 51, 0.9); /* Fond semi-transparent */
+    padding: 15px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    margin-bottom: 15px; /* Marge en bas */
+    border-left: 4px solid #ffcc00; /* Bordure gauche colorée */
+}
+
+.comment-box p {
+    font-size: 1.1em; /* Taille de la police */
+}
+
+/* Formulaire de commentaire */
+.comment-form {
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    margin-top: 20px; /* Marge en haut */
+}
+
+.comment-form textarea {
+    background: #222; /* Fond sombre */
+    color: white; /* Couleur du texte */
+    border-radius: 8px; /* Coins arrondis */
+    border: none; /* Pas de bordure */
+    resize: none; /* Désactive le redimensionnement */
+    padding: 10px; /* Espacement intérieur */
+}
+
+.comment-form select {
+    background: #222; /* Fond sombre */
+    color: white; /* Couleur du texte */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 10px; /* Espacement intérieur */
+}
+
+.comment-form button {
+    width: 100%; /* Largeur totale */
+    padding: 12px; /* Espacement intérieur */
+    background: linear-gradient(135deg, #ffcc00, #e6b800); /* Dégradé de fond */
+    color: black; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 8px; /* Coins arrondis */
+    font-size: 1.2em; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    transition: all 0.3s ease-in-out; /* Animation au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre portée */
+}
+
+.comment-form button:hover {
+    background: linear-gradient(135deg, #e6b800, #cc9900); /* Dégradé au survol */
+    transform: scale(1.05); /* Légère augmentation de taille */
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+    .recipe-card {
+        padding: 20px; /* Réduit l'espacement intérieur */
+    }
+    .recipe-card .card-header h1 {
+        font-size: 2em; /* Réduit la taille de la police */
+    }
+    .recipe-image {
+        height: 350px; /* Réduit la hauteur de l'image */
+    }
+    .comment-form button {
+        font-size: 1em; /* Réduit la taille de la police */
+        padding: 10px; /* Réduit l'espacement intérieur */
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-card .card-header h1 {
+        font-size: 1.8em; /* Réduit la taille de la police */
+    }
+    .recipe-image {
+        height: 300px; /* Réduit la hauteur de l'image */
+    }
+    .recipe-description h2, .recipe-instructions h2 {
+        font-size: 1.5em; /* Réduit la taille de la police */
+    }
+}

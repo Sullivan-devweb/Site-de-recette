@@ -1,0 +1,234 @@
+
+
+/* Assure que le contenu prend toute la hauteur de l'écran */
+/* Assure que le body a bien la bonne couleur */
+html, body {
+    height: 100%;
+    background-color: #1e1e1e !important; /* Forcer la couleur noire */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Permet au contenu principal de s'étirer et pousser le footer vers le bas */
+/* Assure que le fond du main est noir */
+main {
+    flex: 1;
+    padding: 20px; /* Ajoute un peu d'espace intérieur */
+    color: white; /* Assure que le texte reste lisible */
+}
+
+
+/* Fixe le footer en bas */
+footer {
+    background-color: #222;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+}
+
+/* Bouton Ajouter une Recette */
+.btn-success {
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+}
+
+/* Grille des recettes */
+.recipes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+/* Style général des cartes */
+.card {
+    background-color: #444 !important;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 100%; /* Assure que toutes les cartes ont la même hauteur */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Empêcher l'effet de zoom des cartes de casser la mise en page */
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Conteneur de l'image ou de la vidéo */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Taille uniforme pour toutes les images et vidéos */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Correction pour les vidéos */
+.card video {
+    width: 100%;
+    height: 200px; /* Assure la même taille que les images */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Contenu de la carte (titre, description, boutons) */
+.card-body {
+    flex: 1; /* Permet au contenu de s'étirer uniformément */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Titre */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Texte de description */
+.card-text {
+    font-size: 0.9rem;
+    color: #ccc;
+    flex-grow: 1; /* Permet au texte de s'adapter dynamiquement */
+}
+
+/* Boutons Modifier et Supprimer */
+.card .btn-warning, 
+.card .btn-danger {
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    width: 48%; /* Assure que les boutons restent alignés */
+}
+
+.card .btn-warning:hover, 
+.card .btn-danger:hover {
+    transform: translateY(-2px);
+}
+
+/* Alignement des boutons dans la carte */
+.card .d-flex {
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+/* Boutons Modifier et Supprimer */
+.btn-warning, .btn-danger {
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.btn-warning:hover, .btn-danger:hover {
+    transform: translateY(-2px);
+}
+
+/* Modal Bootstrap */
+.modal-content {
+    background-color: #444 !important;
+    color: white !important;
+    border-radius: 12px;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* Style des champs de formulaire */
+.form-control, .form-select {
+    background-color: #222 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #333 !important;
+}
+
+/* Bouton de fermeture du modal */
+.btn-close {
+    background-color: #f44336 !important;
+    color: white !important;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-close:hover {
+    background-color: #e53935 !important;
+}
+
+/* Liste des ingrédients */
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-list li {
+    background-color: #333;
+    padding: 8px 15px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Boutons de suppression des ingrédients */
+.ingredients-list li button {
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ingredients-list li button:hover {
+    background-color: red;
+}
+
+
+#error-box {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+

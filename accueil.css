@@ -1,0 +1,249 @@
+/* Styles globaux */
+body, html {
+    font-family: 'Rock Salt', cursive;
+    background-color: #1a1a1a;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/blackboard.png');
+    background-repeat: repeat;
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/* Titres */
+h1, h2, h3 {
+    text-align: center;
+    color: #ffcc00; /* Couleur jaune pour les titres */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Boutons */
+.btn-primary, .view-recipe {
+    background: linear-gradient(135deg, #ffcc00, #e6b800); /* Dégradé jaune */
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: black; /* Texte en noir pour contraster */
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover, .view-recipe:hover {
+    background: linear-gradient(135deg, #e6b800, #cc9900);
+    transform: translateY(-2px);
+}
+
+/* Section principale */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Carrousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Hauteur fixe pour une meilleure uniformité */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 60px; /* Ajusté pour laisser de la place aux indicateurs */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: 1.5rem;
+    font-family: 'Rock Salt', cursive;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 5px 0 0;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #ffcc00;
+    font-size: 1.5rem; /* Taille réduite des flèches */
+    padding: 8px; /* Espacement réduit */
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 40px; /* Largeur fixe */
+    height: 40px; /* Hauteur fixe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px; /* Position des indicateurs */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px; /* Espacement entre les points */
+    z-index: 15; /* Assure que les indicateurs sont au-dessus des autres éléments */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.carousel-indicators button {
+    width: 12px; /* Taille des points */
+    height: 12px; /* Taille des points */
+    border-radius: 50%; /* Rend les points parfaitement ronds */
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur des points inactifs */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-indicators button.active {
+    background-color: #ffcc00; /* Couleur du point actif */
+    transform: scale(1.2); /* Effet de zoom pour le point actif */
+}
+
+/* Section des recettes récentes */
+.recent-recipes {
+    margin-top: 40px;
+}
+
+.recent-recipes .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.recent-recipes .col-md-4 {
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recent-recipes .col-md-4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.recent-recipes .card {
+    border: none;
+    background-color: transparent;
+}
+
+.recent-recipes .recipe-img-recent {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.recent-recipes .card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.recent-recipes .card-title {
+    font-size: 1.2rem;
+    font-family: 'Rock Salt', cursive;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+}
+
+.recent-recipes .btn-primary {
+    margin-top: 10px;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .recent-recipes .col-md-4 {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .recent-recipes .col-md-4 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

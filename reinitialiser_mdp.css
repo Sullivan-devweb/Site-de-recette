@@ -1,0 +1,175 @@
+/* Reset des styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles globaux */
+body, html {
+    font-family: 'Rock Salt', cursive;
+    background-color: #2C2F33;
+    background-image: url('image/couvert.webp');
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-size: cover; /* L'image couvre toute la zone disponible */
+    background-position: center center; /* Centre l'image */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/* Container principal */
+.reset-password-container {
+    background-color: #333; /* Fond sombre pour la carte */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Positionne les éléments en haut */
+    height: auto; /* Hauteur auto pour s'adapter au contenu */
+}
+
+/* Titre */
+.reset-password-container h2 {
+    font-size: 1.8em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
+form {
+    margin-top: 20px;
+}
+
+/* Groupes de formulaire */
+.form-group {
+    margin-bottom: 20px; /* Ajout d'espace supplémentaire entre les champs */
+    text-align: left;
+}
+
+/* Label du formulaire */
+form label {
+    font-size: 1em;
+    color: #fff; /* Texte en blanc */
+    text-align: left;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Champ de saisie */
+form input[type="password"] {
+    width: 100%;
+    padding: 14px; /* Augmentation de l'espace dans les champs */
+    margin-bottom: 25px; /* Espacement accru entre les champs */
+    border: 1px solid #666; /* Bordure plus sombre */
+    border-radius: 8px; /* Coins arrondis */
+    font-size: 16px;
+    color: #333;
+    background-color: #444; /* Fond sombre des champs */
+    transition: all 0.3s ease; /* Effet de transition pour un focus plus fluide */
+}
+
+form input[type="password"]:focus {
+    outline: none;
+    border-color: #31E9B9; /* Bordure verte lors du focus */
+    background-color: #555; /* Légère modification de l'arrière-plan */
+}
+
+/* Bouton d'envoi */
+form button {
+    width: 100%;
+    padding: 14px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Rock Salt', cursive;
+    margin-top: 30px; /* Plus d'espacement sous le bouton */
+}
+
+form button:hover {
+    background-color: gray;
+}
+
+/* Message PHP sous le bouton */
+.php-message {
+    margin-top: 30px; /* Plus d'espace avant le message */
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Message de succès (PHP) */
+.php-message .message.success {
+    background-color: #28A745; /* Couleur verte plus visible */
+    border-color: #28A745;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour plus de visibilité */
+    animation: fadeIn 0.5s ease-in-out; /* Animation d'apparition */
+    display: block;
+}
+
+.php-message .message.success a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Message d'erreur (PHP) */
+.php-message .message.error {
+    background-color: #DC3545; /* Couleur rouge plus visible */
+    border-color: #DC3545;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour plus de visibilité */
+    animation: fadeIn 0.5s ease-in-out; /* Animation d'apparition */
+    display: block;
+}
+
+/* Animation d'apparition pour les messages */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .reset-password-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .reset-password-container {
+        padding: 15px;
+    }
+    .reset-password-container h2 {
+        font-size: 1.6em;
+    }
+    form input[type="password"],
+    form button {
+        font-size: 14px;
+    }
+}

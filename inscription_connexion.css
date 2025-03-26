@@ -1,0 +1,147 @@
+/* Styles globaux */
+body, html {
+    font-family: 'Rock Salt', cursive;
+    background-color: #1a1a1a;
+    background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover; /* Image en couverture */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Éviter que l'image se répète */
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative; /* Pour positionner le pseudo-élément ::before */
+}
+
+/* Ajout d'un effet sombre sur l'image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Opacité de 50% */
+    backdrop-filter: blur(5px); /* Effet de flou */
+    z-index: 0;
+}
+
+/* Titres */
+h1, h2, h3 {
+    text-align: center;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+/* Boutons */
+.btn-primary {
+    background: linear-gradient(135deg, #ffcc00, #e6b800);
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    box-shadow: 0 3px 8px rgba(255, 204, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #e6b800, #cc9900);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(255, 204, 0, 0.5);
+}
+
+/* Cartes et Formulaires */
+.card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.form-label {
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    background-color: #3a3a3a;
+    border: 1px solid #666;
+    color: white;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #444;
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.6);
+}
+
+/* Prévisualisation de l'image */
+#image-preview img {
+    border: 1px solid #ffcc00;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(255, 204, 0, 0.3);
+    max-width: 80px;
+    max-height: 80px;
+}
+
+/* Suggestions de ville */
+.suggestions {
+    border: 1px solid #ffcc00;
+    max-height: 100px;
+    overflow-y: auto;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    z-index: 1000;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(255, 204, 0, 0.3);
+}
+
+.suggestions div {
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.85rem;
+    transition: background 0.3s ease;
+}
+
+.suggestions div:hover {
+    background-color: #444;
+    color: #ffcc00;
+}
